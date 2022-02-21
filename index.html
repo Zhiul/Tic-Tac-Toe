@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <script src="/script.js" defer></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <header>Tic Tac Toe</header>
+
+    <button id="go-back"><img src="/assets/arrow-left-circle.svg" alt="back"></button>
+
+    <div class="computer-mode">
+        <div class='player-name' id="first-player-name-computer">
+            <label for="first-player computer">Player 1 name</label>
+            <input id="first-player-computer" class='player-name-input' type="text" maxlength="10" placeholder="Must not be empty" autocomplete="off">
+            <button id='set-first-player-computer-name'>Set</button>
+        </div>
+    </div>
+
+    <div class="local-mode">
+        <div class='player-name' id="first-player-name">
+            <label for="first-player">Player 1 name</label>
+            <input id="first-player" class='player-name-input' type="text" maxlength="10" placeholder="Must not be empty" autocomplete="off">
+            <button id='set-first-player-name'>Set</button>
+        </div>
+
+        <div class='player-name' id="second-player-name">
+            <label for="second-player">Player 2 name</label>
+            <input id="second-player" class='player-name-input' type="text" maxlength="10" placeholder="Must not be empty" autocomplete="off">
+            <button id='set-second-player-name'>Set</button>
+        </div>
+    </div>
+
+    <div class="select-mode">
+        <div role="button" aria-pressed="false" tabindex="0" class="mode-button" id="local-mode">
+            <img src="/assets/local.svg" alt="">
+            <p>Local</p>
+        </div>
+
+        <div role="button" aria-pressed="false" tabindex="0" class="mode-button" id="computer-mode">
+            <img src="/assets/computer.png" alt="">
+            <p>Computer</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="game-board-wrapper">
+            
+            <div class="custom-select">
+                <select>
+                  <option value="0">Difficulty</option>
+                  <option value="1">Easy</option>
+                  <option value="2">Normal</option>
+                  <option value="3">Unbeatable</option>
+                </select>
+              </div>
+    
+            <div class="game-board">
+                <div><div class="cell" data-cell='0'></div></div>
+                <div><div class="cell" data-cell='1'></div></div>
+                <div><div class="cell" data-cell='2'></div></div>
+                <div><div class="cell" data-cell='3'></div></div>
+                <div><div class="cell" data-cell='4'></div></div>
+                <div><div class="cell" data-cell='5'></div></div>
+                <div><div class="cell" data-cell='6'></div></div>
+                <div><div class="cell" data-cell='7'></div></div>
+                <div><div class="cell" data-cell='8'></div></div>
+            </div>
+        
+            <div class="player-stats-wrapper">
+                <h2>Wins</h2>
+                <div class="player-stats">
+                    <div class="player-victories">
+                        <div class="player-mark X">
+                            <img src="/assets/x.svg" alt="X">
+                        </div>
+                        <div class="player-mark-x-name"></div>
+                        <div class="x-victories"></div>
+                    </div>
+                
+                
+                    <div class="player-victories">
+                        <div class="player-mark O">
+                            <img src="/assets/o.svg" alt="O">
+                        </div>
+                        <div class="player-mark-o-name"></div>
+                        <div class="o-victories"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+
+    <div id="display-winner">
+        <div id="game-result"></div>
+    </div>
+</body>
+</html>
