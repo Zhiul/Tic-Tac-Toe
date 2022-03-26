@@ -94,7 +94,7 @@ const gameBoard = (() =>{
         for(i = 0; i < gameBoard.cells.length; i++){
                 if (gameMode.gameIsFinished === false){
                     if (gameBoard.cells[i] === 'X' || gameBoard.cells[i] === 'O'){
-                        gameBoard.cellsElements[i].style.backgroundImage = `url('./assets/${gameBoard.cells[i]}.svg')`
+                        gameBoard.cellsElements[i].style.backgroundImage = `url('./assets/${gameBoard.cells[i].toLowerCase()}.svg')`
                         if(gameBoard.cells[i] === 'X'){
                             gameBoard.cellsElements[i].style.filter = 'invert(51%) sepia(97%) saturate(3801%) hue-rotate(181deg) brightness(105%) contrast(104%)'
                         } else{
